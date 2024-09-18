@@ -23,7 +23,7 @@ public class KillRanking extends PluginBase implements Listener {
 
     private Ranking ranking;
 
-    private final HashMap<String, Integer> killCount = new HashMap<>();
+    private final HashMap<String, Number> killCount = new HashMap<>();
 
     @Override
     public void onLoad() {
@@ -80,7 +80,7 @@ public class KillRanking extends PluginBase implements Listener {
         if (lastDamageCause instanceof EntityDamageByEntityEvent event) {
             if (event.getDamager() instanceof Player player) {
                 String name = player.getName();
-                this.killCount.put(name, this.killCount.getOrDefault(name, 0) + 1);
+                this.killCount.put(name, this.killCount.getOrDefault(name, 0).intValue() + 1);
             }
         }
     }
