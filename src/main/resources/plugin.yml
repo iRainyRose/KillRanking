@@ -1,6 +1,6 @@
 name: KillRanking
 main: org.rainyrose.killranking.KillRanking
-version: "1.0.0"
+version: "1.0.1"
 api: ["1.0.0"]
 load: POSTWORLD
 author: "Rainy_Rose"
